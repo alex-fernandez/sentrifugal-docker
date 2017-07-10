@@ -17,6 +17,8 @@ services:
         build: ./php-fpm
         volumes:
             - ./code:/code
+            - ./code/public:/code/public
+            - ./code/install:/code/install
         networks:
             - code-network
         links:
